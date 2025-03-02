@@ -27,7 +27,7 @@ if option == "Equipos ":
     st.subheader("Equipos inscritos 🏆")
     
     # Cargar el archivo CSV
-    uploaded_file = st.file_uploader("Sube el archivo CSV con los equipos", type=["csv"])
+    uploaded_file = st.file_uploader("Equipos.xlsx", type=["csv"])
     
     if uploaded_file is not None:
         # Leer el archivo CSV
