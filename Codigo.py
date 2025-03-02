@@ -16,7 +16,7 @@ option = st.sidebar.radio("Selecciona una opción", ["Equipos", "Tabla de posici
 
 # Configuración de las credenciales y acceso a Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name('ruta_al_archivo_json_de_credenciales.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('just-armor-452506-q7-3aaa2195ebd9.json', scope)
 client = gspread.authorize(creds)
 
 # ID del documento de Google Sheets
