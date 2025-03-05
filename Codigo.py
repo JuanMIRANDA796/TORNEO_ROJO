@@ -90,5 +90,13 @@ if db_file:
         """)
         st.markdown("[Formulario de Inscripción](https://docs.google.com/forms/d/e/1FAIpQLSdhDNtJESBn-JohTgYkrALun3MfsulqyTos-uOF-wvV-AWRDg/viewform?usp=header)", unsafe_allow_html=True)
 
+    elif menu == "Premiación":
+        st.header("Premiación")
+        st.markdown("""
+        Luego de saber la cantidad de equipos se recogerá todo el dinero y se dividirá de la siguiente manera:
+        1. El Campeón se lleva el 70% del dinero recogido.
+        2. El subcampeón se llevará el 30% del dinero recogido.
+        """)
+
     # Cerrar la conexión a la base de datos
     conn.close()
