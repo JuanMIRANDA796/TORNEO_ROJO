@@ -70,18 +70,18 @@ if db_file:
         
         # Consulta para obtener los equipos de la base de datos
         # Obtener nombres de las tablas
-    tables = pd.read_sql("SELECT name FROM sqlite_master WHERE type='table'", conn)
-    st.sidebar.write("### 📌 Tablas disponibles en la base de datos:")
-    st.sidebar.write(tables)
-
-    # Selección de tabla para visualizar
-    table_name = st.sidebar.selectbox("Selecciona una tabla para ver los datos:", tables["name"])
-
-    if table_name:
-        # Cargar los datos en un DataFrame
-        df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
-        st.write(f"### 📊 Datos de la tabla `{table_name}`")
-        st.dataframe(df)
-
-        # También puedes mostrar algunos gráficos si tienes datos suficientes
+        tables = pd.read_sql("SELECT name FROM sqlite_master WHERE type='table'", conn)
+        st.sidebar.write("### 📌 Tablas disponibles en la base de datos:")
+        st.sidebar.write(tables)
+    
+        # Selección de tabla para visualizar
+        table_name = st.sidebar.selectbox("Selecciona una tabla para ver los datos:", tables["name"])
+    
+        if table_name:
+            # Cargar los datos en un DataFrame
+            df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
+            st.write(f"### 📊 Datos de la tabla `{table_name}`")
+            st.dataframe(df)
+    
+            # También puedes mostrar algunos gráficos si tienes datos suficientes
     
