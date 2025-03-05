@@ -23,10 +23,16 @@ menu = st.sidebar.radio(
 
 # Ruta de la imagen y el archivo de música
 image_path = Path.home() / "Downloads" / "image(4).png"  # Cambia 'nombre_de_tu_imagen.png' por el nombre de tu imagen
-audio_path = Path.home() / "Downloads" / "nombre_de_tu_audio.mp3"   # Cambia 'nombre_de_tu_audio.mp3' por el nombre de tu archivo de audio
+#audio_path = Path.home() / "Downloads" / "nombre_de_tu_audio.mp3"   # Cambia 'nombre_de_tu_audio.mp3' por el nombre de tu archivo de audio
 
 #2. Mostrar la imagen y reproducir el audio en la opción de inicio
 if menu == "Inicio":
     st.header("Bienvenido al Torneo Económicas")
-    st.image(str(image_path), caption="Imagen cargada")  # Muestra la imagen desde la carpeta de descargas
-    st.audio(str(audio_path))  # Reproduce el archivo de audio desde la carpeta de descargas
+    
+    # Leer y mostrar la imagen desde la carpeta de descargas
+    with open(image_path, "rb") as image_file:
+        st.image(image_file, caption="Imagen cargada")
+    
+    # Leer y reproducir el archivo de audio desde la carpeta de descargas
+    #with open(audio_path, "rb") as audio_file:
+     #   st.audio(audio_file)
