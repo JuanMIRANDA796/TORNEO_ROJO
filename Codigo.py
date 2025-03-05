@@ -34,3 +34,11 @@ st.markdown('<p class="text">Nea esta página se crea para dar toda la informaci
 # Menú lateral para navegación
 st.sidebar.title("📌 Menú de Opciones")
 option = st.sidebar.radio("Selecciona una opción", ["Equipos", "Tabla de posiciones", "Esquema del Torneo", "Premiación", "Inscripción"])
+
+# Mostrar la tabla de equipos cuando se selecciona la opción "Equipos"
+if option == "Equipos":
+    st.header("Equipos Participantes")
+    # Leer el archivo CSV
+    df = pd.read_csv('equipos.csv')
+    # Mostrar la tabla en el Dashboard
+    st.dataframe(df)
