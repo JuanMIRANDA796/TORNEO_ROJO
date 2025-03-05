@@ -52,11 +52,11 @@ if db_file:
         st.header("Nea pille pues, en esta pagina va a estar toda la información con respecto al torneo que se jugara este Viernes")
         
         # Leer y mostrar la imagen desde la carpeta de descargas
-        try:
-            with open(image_path, "rb") as image_file:
-                st.image(image_file, caption="Imagen cargada")
-        except FileNotFoundError:
-            st.error("El archivo de imagen no se encontró en la ruta especificada.")
+        #try:
+         #   with open(image_path, "rb") as image_file:
+          #      st.image(image_file, caption="Imagen cargada")
+        #except FileNotFoundError:
+         #   st.error("El archivo de imagen no se encontró en la ruta especificada.")
         
         # Leer y reproducir el archivo de audio desde la carpeta de descargas
         #try:
