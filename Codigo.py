@@ -13,7 +13,7 @@ import requests
 GITHUB_DB_URL = "https://raw.githubusercontent.com/JuanMIRANDA796/TORNEO_ROJO/main/inscripcion.db"
 
 # Función para descargar y guardar el archivo de base de datos
-def descargar_db(url, filename="mi_base_de_datos.db"):
+def descargar_db(url, filename="inscripcion.db"):
     response = requests.get(url)
     if response.status_code == 200:
         with open(filename, "wb") as file:
@@ -66,10 +66,10 @@ if db_file:
          #   st.error("El archivo de audio no se encontró en la ruta especificada.")
     
     elif menu == "Equipos":
-        st.header("Equipos Inscritos")
+        st.header("Equipos Inscritos, a medida en que se vayan inscribiendo los equipos la base de datos se va actualizando")
         
         # Consulta para obtener los equipos de la base de datos
-        query = "SELECT * FROM equipos"  # Asegúrate de que la tabla se llame 'equipos'
+        query = "SELECT * FROM inscripcion"  # Asegúrate de que la tabla se llame 'equipos'
         
         try:
             df_equipos = pd.read_sql(query, conn)
