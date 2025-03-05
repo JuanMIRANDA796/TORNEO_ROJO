@@ -69,7 +69,7 @@ if db_file:
         st.header("Equipos Inscritos, a medida en que se vayan inscribiendo los equipos la base de datos se va actualizando")
         
         # Consulta para obtener los equipos de la base de datos
-        query = "SELECT * FROM inscripcion"  # Asegúrate de que la tabla se llame 'equipos'
+        query = "SELECT * FROM R_1"  # Asegúrate de que la tabla se llame 'equipos'
         
         try:
             df_equipos = pd.read_sql(query, conn)
