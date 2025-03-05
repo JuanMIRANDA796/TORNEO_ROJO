@@ -19,9 +19,10 @@ scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/au
 creds = ServiceAccountCredentials.from_json_keyfile_name('just-armor-452506-q7-207eaab47fa8.json', scope)
 client = gspread.authorize(creds)
 
-# Función para cargar datos de Google Sheets
+# Función para cargar datos de Google Sheets usando la URL
 def load_data(sheet_name):
-    sheet = client.open("INSCRIPCIÓN").worksheet(sheet_name)
+    spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1ibU57_4hTSA79oE-B8M9Se5f7A0uHi9nr_VJtPmcpRE/edit#gid=506641729'
+    sheet = client.open_by_url(spreadsheet_url).worksheet(sheet_name)
     data = sheet.get_all_records()
     return pd.DataFrame(data)
 
