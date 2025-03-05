@@ -21,8 +21,8 @@ menu = st.sidebar.radio(
 )
 
 # Ruta de la imagen y el archivo de música
-image_path = "C:/Users/Juan/Downloads/image (4).png"  # Ruta específica de la imagen
-#audio_path = "C:/Users/Juan/Downloads/nombre_de_tu_audio.mp3"  # Cambia 'nombre_de_tu_audio.mp3' por el nombre de tu archivo de audio
+image_path = r"C:\Users\Juan\Downloads\image (4).png"  # Ruta específica de la imagen con cadena sin procesar
+#audio_path = r"C:\Users\Juan\Downloads\nombre_de_tu_audio.mp3"  # Cambia 'nombre_de_tu_audio.mp3' por el nombre de tu archivo de audio
 
 #2. Mostrar la imagen y reproducir el audio en la opción de inicio
 if menu == "Inicio":
