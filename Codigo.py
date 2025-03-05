@@ -6,20 +6,20 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Configuración inicial del Dashboard
 st.set_page_config(page_title='Torneo_ROJO', layout='wide')
 
-# Agregar estilo CSS con la fuente Streetwear
+# Agregar estilo CSS con la fuente Rock Salt
 st.markdown("""
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Streetwear&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
     .title {
-        font-family: 'Streetwear', sans-serif;
+        font-family: 'Rock Salt', cursive;
         font-size: 40px;
         color: #f63366;
         text-align: center;
         font-weight: bold;
     }
     .text {
-        font-family: 'Streetwear', sans-serif;
+        font-family: 'Rock Salt', cursive;
         font-size: 16px;
         color: #333333;
     }
