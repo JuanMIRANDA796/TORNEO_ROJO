@@ -16,7 +16,7 @@ option = st.sidebar.radio("Selecciona una opción", ["Equipos", "Tabla de posici
 
 # Configuración de acceso a Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name('just-armor-452506-q7-207eaab47fa8.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('C:\\Users\\Juan\\Downloads\\just-armor-452506-q7-207eaab47fa8.json', scope)
 client = gspread.authorize(creds)
 
 # Función para cargar datos de Google Sheets usando la URL
