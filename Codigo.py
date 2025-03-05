@@ -39,6 +39,6 @@ option = st.sidebar.radio("Selecciona una opción", ["Equipos", "Tabla de posici
 if option == "Equipos":
     st.header("Equipos Participantes")
     # Leer el archivo CSV
-    df = pd.read_csv('equipos.csv')
+    df = pd.read_csv('INSCRIPCIÓN (respuestas) - R_1.csv')
     # Mostrar la tabla en el Dashboard
     st.dataframe(df)
