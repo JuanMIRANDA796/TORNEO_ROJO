@@ -78,4 +78,4 @@ if db_file:
             st.error(f"Error al obtener los equipos: {e}")
         
         # También puedes mostrar algunos gráficos si tienes datos suficientes
-        if not df
+    
