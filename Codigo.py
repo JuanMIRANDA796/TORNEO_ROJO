@@ -98,5 +98,13 @@ if db_file:
         2. El subcampeón se llevará el 30% del dinero recogido.
         """)
 
+    elif menu == "Información general":
+        st.header("Información general")
+        st.markdown("""
+        1. El torneo se jugará en las canchas del metro de la U.
+        2. El dinero se recogerá el mismo día del torneo.
+        3. La hora de inicio está por confirmar.
+        """)
+
     # Cerrar la conexión a la base de datos
     conn.close()
